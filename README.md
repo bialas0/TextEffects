@@ -115,7 +115,7 @@ string[] myList =
 {
     "1. Hello World!",
     "2. This is a list!",
-    "3. It is typed by each line!",
+    "3. It is typed by each letter and then line!",
     "Goodbye for now..."
 };
 Typewriter.Typelist('l', myList, 75);
