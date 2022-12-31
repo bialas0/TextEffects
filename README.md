@@ -2,13 +2,22 @@
 A wide variety of unique text effects for your C# console applications, all simplified in this library!
 # Installation Instructions
 ### Visual Studio Code
-#### 1. 
-#### 2. 
-#### 3. 
+#### 1. Download and extract zip file.
+#### 2. Place the .DLL file in your project file, preferably in a DLL folder.
+#### 3. Reference the .DLL in the .CSPROJ file
+```cs
+    <ItemGroup>
+     <Reference Include="TextEffects">
+       <HintPath>..\Dlls\TextEffects.dll</HintPath>
+     </Reference>
+    </ItemGroup>
+```
 ### Visual Studio 2022
-#### 1. 
-#### 2. 
-#### 3. 
+#### 1. Download and extract zip file.
+#### 2. Place the .DLL file in your project file, preferably in a DLL folder.
+#### 3. Reference the .DLL in the Reference Manager.
+![image](https://user-images.githubusercontent.com/118835576/210154186-ca1d5998-d3c1-4119-bb55-1a08169e04f6.png)
+
 # Documentation
 ## Target Language: C#
 ## Target Framework: .NET 6.0 (LTS)
