@@ -1,5 +1,7 @@
 # TextEffects
 A wide variety of unique text effects for your C# console applications, all simplified in this library!
+
+I feel like this is useless but yeah... I made a C# Library B)
 # Installation Instructions
 ### Visual Studio Code
 #### 1. Download and extract zip file.
