@@ -29,19 +29,17 @@ using TextEffects;
 ## Typewriter
 ### All instances -
 ```cs
-Typewriter.Typeline();
+Typewriter.Type();
+Typewriter.TypeLine();
+Typewriter.List();
 Typewriter.TypeList();
 ```
-### ```Typeline```
+### ```Type, TypeLine```
 This is a simple effect that will allow you to easily integrate a typewritten animation.
 ```cs
-Typewriter.Typeline(effect, message, typeSpeed);
+Typewriter.Type(message, typeSpeed);
+Typewriter.TypeLine(message, typeSpeed);
 ```
-The 'effect' can be defined using a ```Char```, either ```x``` or ```y```.
-
-```x``` - This will typewrite the contents of the message horizontally.
-
-```y``` - This will typewrite the contents of the message vertically.
 
 The 'message' must be defined using a ```String```.
 
@@ -49,7 +47,7 @@ The 'typeSpeed' parameter can only be defined using an ```Int``` type. As the na
 ### Example 001
 ### Code -
 ```cs
-Typewriter.Typeline('x', "Hello World!", 75);
+Typewriter.Type("Hello World!", 75);
 ```
 ### Output -
 ```
@@ -58,7 +56,7 @@ Hello World!
 ### Example 002
 ### Code -
 ```cs
-Typewriter.Typeline('y', "Hello World!", 75);
+Typewriter.TypeLine("Hello World!", 75);
 ```
 ### Output -
 ```
@@ -75,16 +73,11 @@ l
 d
 !
 ```
-### ```Typelist```
+### ```List, TypeList```
 Similarly to ```Typeline```, this effect types out .
 ```cs
 Typewriter.Typeline(effect, message, typeSpeed);
 ```
-The 'effect' can be defined using a ```Char```, either ```w``` or ```l```.
-
-```w``` - This will typewrite the contents of the message line-by-line.
-
-```l``` - This will typewrite the contents of the message letter-by-letter for each line.
 
 The 'message' must be defined using a ```String[]```.
 
@@ -96,16 +89,16 @@ string[] myList =
 {
     "1. Hello World!",
     "2. This is a list!",
-    "3. It is typed by each line!",
+    "3. It is typed by each letter and then line!",
     "Goodbye for now..."
 };
-Typewriter.Typelist('w', myList, 75);
+Typewriter.Type(myList, 75);
 ```
 ### Output -
 ```
 1. Hello World!
 2. This is a list!
-3. It is typed by each line!
+3. It is typed by each letter and then line!
 Goodbye for now...
 ```
 ### Example 004
@@ -115,15 +108,41 @@ string[] myList =
 {
     "1. Hello World!",
     "2. This is a list!",
-    "3. It is typed by each letter and then line!",
+    "3. It is typed by each line!",
     "Goodbye for now..."
 };
-Typewriter.Typelist('l', myList, 75);
+Typewriter.TypeList(myList, 75);
 ```
 ### Output -
 ```
 1. Hello World!
 2. This is a list!
-3. It is typed by each letter and then line!
+3. It is typed by each line!
 Goodbye for now...
+```
+
+## Animation
+### All instances -
+```cs
+Animation.Spinner();
+```
+
+### ```Spinner```
+The spinner can be easily defined with just one short line and is suitable for when in the need 
+```cs
+Animation.Spinner(type, animSpeed);
+```
+
+The 'type' parameter must be defined using an ```Int```.
+
+The 'animSpeed' parameter can only be defined using an ```Int``` type. As the name suggests, with this you can adjust the animation speed of the spinner.
+
+### Example 003
+### Code -
+```cs
+Animation.Spinner(1, 100);
+```
+### Output -
+```
+/-\\|
 ```
