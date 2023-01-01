@@ -130,17 +130,19 @@ Animation.Spinner();
 ### ```Spinner```
 The spinner can be easily defined with just one short line and is suitable for when in the need 
 ```cs
-Animation.Spinner(type, animSpeed);
+Animation.Spinner(type, animSpeed, rotations);
 ```
 
 The 'type' parameter must be defined using an ```Int```.
 
 The 'animSpeed' parameter can only be defined using an ```Int``` type. As the name suggests, with this you can adjust the animation speed of the spinner.
 
+The 'rotations' parameter, defined using an ```Int``` type, it sets the amount of rotations needed.
+
 ### Example 003
 ### Code -
 ```cs
-Animation.Spinner(1, 100);
+Animation.Spinner(0, 100, 50);
 ```
 ### Output -
 ```
